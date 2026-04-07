@@ -90,7 +90,7 @@ class RrtPlanner:
         self.map_aabb = map_aabb
         self.graph_publisher = rospy.Publisher("/rrt_graph", MarkerArray, queue_size=10)
         self.plan_visualization_pub = rospy.Publisher("/waypoints", MarkerArray, queue_size=10)
-        self.delta = 0.1
+        self.delta = 0.2
         self.obstacle_padding = 0.15
         self.goal_threshold = GOAL_THRESHOLD
 
@@ -213,7 +213,7 @@ class RrtPlanner:
 
         # Find path from start to goal location through tree
         ######### Your code starts here #########
-        max_iterations = 10000
+        max_iterations = 7000
         goal_reached_node = None
 
         for _ in range(max_iterations):
