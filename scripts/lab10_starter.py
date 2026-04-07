@@ -324,12 +324,6 @@ class ObstacleFreeWaypointController:
         self.rate.sleep()
 
 
-""" Example usage
-
-rosrun development lab10.py --map_filepath src/csci445l/scripts/lab10_map.json
-"""
-
-
 if __name__ == "__main__":
 
     parser = ArgumentParser()
